@@ -9,7 +9,7 @@ export default function App() {
     <View style={styles.container}>
       <Appbar />
       <MemoList />
-      <CircleButton />
+      <CircleButton>＋</CircleButton>
     </View>
   );
 }
@@ -21,6 +21,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     position: 'relative',
-    paddingTop: 78
+    paddingTop: 78,
   }
 });

@@ -4,15 +4,15 @@ import {StyleSheet, Text, View} from 'react-native';
 class CircleButton extends React.Component {
   render() {
     return(
-      <View style={styles.memoAddBtn}>
-        <Text style={styles.addBtn}>＋</Text>
+      <View style={styles.circleBtn}>
+        <Text style={styles.addBtn}>{this.props.children}</Text>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  memoAddBtn: {
+  circleBtn: {
     height: 50,
     width: 50,
     backgroundColor: '#b3afaf',

@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import * as Font from 'expo-font';
 
 class Appbar extends React.Component {
   render() {
@@ -33,7 +34,8 @@ const styles = StyleSheet.create({
   },
   appbarTitle: {
     fontSize: 22,
-    color: '#444'
+    color: '#444',
+
   },
 });
 
