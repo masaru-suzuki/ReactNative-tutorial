@@ -23,7 +23,7 @@ class MemoListScreen extends React.Component {
             style={styles.editButton}
             color='white'
             //circlebuttonに渡したい設定を追加していく
-          >＋</CircleButton>
+          ></CircleButton>
       </View>
     );
   }
