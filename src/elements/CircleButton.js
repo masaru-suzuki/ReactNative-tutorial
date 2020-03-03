@@ -2,6 +2,8 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import fontAwsome from '../../assets/fonts/fa-solid-900.ttf';
 import * as Font from 'expo-font';
+import { createIconSet } from '@expo/vector-icons';
+
 
 class CircleButton extends React.Component {
   //stateはconstructorいらないんだっけ・・・？
@@ -29,6 +31,9 @@ class CircleButton extends React.Component {
     //   txtColor = '#111';
     // }
     const { style } = this.props;
+    const glyphMap = { 'icon-name': '\uf303', test: '' };
+    const expoAssetId = require("../../assets/fonts/fa-solid-900.ttf");
+    const CustomIcon = createIconSet(glyphMap, 'FontName', expoAssetId);
 
     return (
       //ここのstyleの付け方慣れていない
@@ -36,7 +41,10 @@ class CircleButton extends React.Component {
       //   <Text style={[styles.addBtn, {color: txtColor}]}>{this.props.children}</Text>
       <View style={[styles.circleBtn, style]}>
         {this.state.fontLoaded ? (
-          <Text style={styles.addBtn}>{'\uf85e'}</Text>
+          <Text style={styles.addBtn}>
+            {/* {'\uf85e'} */}
+            <CustomIcon name="icon-name" size={20} />
+            </Text>
         ) : null}
       </View>
     );
@@ -58,12 +66,11 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.4,
     shadowRadius: 3,
-    fontFamily: 'FontAwsome'
   },
   addBtn: {
     fontSize: 25,
     lineHeight: 25,
-    opacity: 0.5
+    opacity: 0.5,
   }
 });
 
