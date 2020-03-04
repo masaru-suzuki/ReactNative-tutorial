@@ -1,29 +1,29 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import CircleButton from '../elements/CircleButton';
 
 class MemoListScreen extends React.Component {
   render() {
-    return(
+    return (
       <View style={styles.container}>
-          <View style={styles.memoHeader}>
-            <Text style={styles.memoHeaderTitle}>
+        <View style={styles.memoHeader}>
+          <Text style={styles.memoHeaderTitle}>
             ReactNative Tutorial
-            </Text>
-            <Text style={styles.memoHeaderDate}>
+          </Text>
+          <Text style={styles.memoHeaderDate}>
             2020/3/3
-            </Text>
-          </View>
-          <View style={styles.memoContents}>
-            <Text style={styles.memoContentsText}>
+          </Text>
+        </View>
+        <View style={styles.memoContents}>
+          <Text style={styles.memoContentsText}>
             講座のアイデアです。
-            </Text>
-          </View>
-          <CircleButton
-            style={styles.editButton}
-            color='white'
-            //circlebuttonに渡したい設定を追加していく
-          ></CircleButton>
+          </Text>
+        </View>
+        <CircleButton
+          style={styles.editButton}
+          color="white"
+          name="pencil"
+        />
       </View>
     );
   }
@@ -32,10 +32,10 @@ class MemoListScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width:'100%'
+    width: '100%',
   },
   memoHeader: {
-    height:100,
+    height: 100,
     justifyContent: 'center',
     padding: 20,
     borderBottomColor: '#bbb',
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   },
   memoHeaderDate: {
     color: '#484747',
-    fontSize :18,
+    fontSize: 18,
   },
   memoContents: {
     padding: 20,
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
   },
   editButton: {
     top: 75,
-  }
+  },
 });
 
 export default MemoListScreen;

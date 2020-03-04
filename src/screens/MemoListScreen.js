@@ -1,14 +1,16 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import MemoList from '../components/MemoList';
 import CircleButton from '../elements/CircleButton';
 
 class MemoListScreen extends React.Component {
   render() {
-    return(
+    return (
       <View style={styles.container}>
         <MemoList />
-        <CircleButton>＋</CircleButton>
+        <CircleButton
+          name="pulus"
+        />
       </View>
     );
   }
@@ -17,8 +19,8 @@ class MemoListScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width:'100%'
-  }
+    width: '100%',
+  },
 });
 
 export default MemoListScreen;

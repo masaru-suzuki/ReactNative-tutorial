@@ -20,5 +20,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     position: 'relative',
     paddingTop: 78,
-  }
+  },
 });
