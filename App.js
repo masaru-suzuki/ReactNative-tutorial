@@ -1,5 +1,7 @@
+/* eslint-disable no-use-before-define */
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import Appbar from './src/components/AppBar';
 import MemoDetailScreen from './src/screens/MemoDetailScreen';
 

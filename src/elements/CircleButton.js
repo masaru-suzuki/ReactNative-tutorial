@@ -1,3 +1,5 @@
+/* eslint-disable react/state-in-constructor */
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import * as Font from 'expo-font';
@@ -7,9 +9,7 @@ import fontAwsome from '../../assets/fonts/fa-solid-900.ttf';
 
 class CircleButton extends React.Component {
   // stateはconstructorいらないんだっけ・・・？
-  state = {
-    fontLoaded: false,
-  };
+  state = { fontLoaded: false };
 
   async componentDidMount() {
     await Font.loadAsync({
@@ -37,7 +37,7 @@ class CircleButton extends React.Component {
     const { name, style } = this.props;
     const glyphMap = {
       pencil: '\uf303',
-      pulus: '\uf067',
+      puls: '\uf067',
     };
     const CustomIcon = createIconSet(glyphMap, 'FontAwsome');
 
